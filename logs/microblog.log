@@ -86,3 +86,6 @@ Traceback (most recent call last):
 AttributeError: 'PostForm' object has no attribute 'body'
 2018-04-23 19:33:43,702 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
 2018-04-23 19:34:40,281 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:43:29,552 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:45:04,199 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:45:24,985 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
