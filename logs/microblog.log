@@ -60,3 +60,29 @@ Traceback (most recent call last):
     self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
 2018-04-22 20:37:23,921 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:29:05,192 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:29:17,415 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:32:07,515 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:32:23,039 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:32:44,825 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:32:57,510 ERROR: Exception on /index [POST] [in /Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/andreasantarlasci/Apps/microblog/app/routes.py", line 23, in index
+    post = Post(body=form.body.data, author=current_user)
+AttributeError: 'PostForm' object has no attribute 'body'
+2018-04-23 19:33:43,702 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 19:34:40,281 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
