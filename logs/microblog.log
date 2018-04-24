@@ -78,3 +78,40 @@ Traceback (most recent call last):
     raise exc(msg, lineno, self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: unexpected '%'
 2018-04-23 20:10:38,044 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:41]
+2018-04-23 20:38:30,342 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:43]
+2018-04-23 21:29:18,344 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:43]
+2018-04-23 21:30:12,149 ERROR: Exception on /reset_password_request [POST] [in /Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/andreasantarlasci/Apps/microblog/app/routes.py", line 153, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/andreasantarlasci/Apps/microblog/app/email.py", line 19, in send_password_reset_email
+    user=user, token=token))
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password.html
+2018-04-23 21:31:07,964 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:43]
+2018-04-23 21:38:20,861 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:43]
