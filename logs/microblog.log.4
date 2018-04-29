@@ -1,30 +1,21 @@
-2018-04-28 13:58:08,660 ERROR: Exception on /favicon.ico [GET] [in /Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1590, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1573, in raise_routing_exception
-    raise request.routing_exception
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/ctx.py", line 294, in match_request
-    self.url_adapter.match(return_rule=True)
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2018-04-28 13:59:08,370 ERROR: Exception on / [GET] [in /Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1512, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1471, in handle_http_exception
-    return handler(e)
-  File "/Users/andreasantarlasci/Apps/microblog/app/errors.py", line 6, in not_found_error
-    return render_template('404.html'), 404
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/andreasantarlasci/Apps/microblog/app/routes.py", line 41, in index
+    prev_url=prev_url)
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
@@ -41,7 +32,7 @@ Traceback (most recent call last):
     {% if title %}{{ title }} - Microblog{% else %}{{ _(Welcome to Microblog!) }}{% endif %}
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/andreasantarlasci/Apps/microblog/app/templates/404.html", line 1, in top-level template code
+  File "/Users/andreasantarlasci/Apps/microblog/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
@@ -102,4 +93,3 @@ Traceback (most recent call last):
   File "/Users/andreasantarlasci/Apps/microblog/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 384, in expect
     self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'to'
-2018-04-28 13:59:07,342 INFO: Microblog startup [in /Users/andreasantarlasci/Apps/microblog/app/__init__.py:50]
